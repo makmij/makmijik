@@ -17,14 +17,7 @@ def clean_whitespace(input_str):
 def format_sentence(sentence):
     sentence = sentence.lower() # возвращает копию строки, где все буквы строчные
     sentence = sentence.capitalize() # делает первую букву слова заглавной
-    if sentence.endswith('!'): # ищет данный шаблон в конце строки
-        sentence = sentence[:-1]
-    if sentence.endswith('...'):
-        sentence = sentence[:-3]
-    if sentence.endswith('?'):
-        sentence = sentence[:-1]
-    if not sentence.endswith('.'):
-        sentence += '.'
+    sentence = re.sub(r'[.!?]+$', '.', sentence)
     return sentence
 
 
