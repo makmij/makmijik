@@ -11,7 +11,6 @@ def get_angle():
 
 
 angle = get_angle()
-angle_radians = radians(angle)
 print('Синус угла:', sin(angle))
 print('Косинус угла:', cos(angle))
 print('Тангенс угла:', tan(angle))

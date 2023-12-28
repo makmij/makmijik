@@ -6,7 +6,7 @@ data = {
 }
 
 # Добавляем свои данные в словарь
-data['Мирошниченко'] = 54
+data['Мирошниченко'] = 52
 data['Кузнецов'] = 72
 
 # Вычисляем сумму всех баллов
@@ -16,7 +16,7 @@ total_score = sum(data.values())
 average_score = total_score / len(data)
 
 # Выводим список участников, у которых балл выше среднего
-above_average = [name for name, score in data.items() if score > average_score]
+above_average = [name for name, score in data.items() if score > average_score] #создаем генератор списка, который проходит по  элементам словаря data
 print("Участники с баллами выше среднего:", above_average)
 
 # Находим минимальный и максимальный баллы
