@@ -28,8 +28,8 @@ def output_participants(data, path, porog):
     filtered_data = filter(lambda x: x[1] > porog, data)
 
     with open(path, 'w', encoding='utf-8') as file:
-        for item in filtered_data:
-            file.write(item[0] + "\n")
+        for i in filtered_data:
+            file.write(i[0] + "\n")
 
 
 path = "res.txt"
@@ -41,14 +41,14 @@ try:
     # Сортировка участников по имени
     sorted_by_name = sort_by_name(participants)
     print("Участники конкурса отсортированные по имени:")
-    for item in sorted_by_name:
-        print(item)
+    for i in sorted_by_name:
+        print(i)
 
     # Сортировка участников по баллам
     sorted_by_score = sort_by_score(participants)
     print("\nУчастники конкурса отсортированные по баллам:")
-    for item in sorted_by_score:
-        print(item)
+    for i in sorted_by_score:
+        print(i)
 
     # Вывод участников с результатом выше порога в файл
     output_participants(participants, "res.txt", porog)
